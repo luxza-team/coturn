@@ -1,0 +1,25 @@
+version: "3"
+services:
+  coturn:
+    image: gransystem/coturn:dev
+    build:
+      context: ./coturn
+      dockerfile: Dockerfile-dev
+#    ports:
+### STUN/TURN
+#      - "3478:3478"
+#      - "3478:3478/udp"
+#      - "3479:3479"
+#      - "3479:3479/udp"
+#      - "80:80"
+#      - "80:80/udp"
+### STUN/TURN SSL
+#      - "5349:5349"
+#      - "5349:5349/udp"
+#      - "5350:5350"
+#      - "5350:5350/udp"
+#      - "443:443"
+#      - "443:443/udp"
+## Relay Ports
+#      - "49200-49300:49200-49300"
+#      - "49200-49300:49200-49300/udp"
